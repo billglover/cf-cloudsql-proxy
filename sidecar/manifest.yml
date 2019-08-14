@@ -1,0 +1,19 @@
+---
+applications:
+- name: cloudsql-demo-sidecar
+  memory: 24M
+  instances: 1
+  buildpacks:
+  - binary_buildpack
+  command: ./cloud_sql_demo
+  env:
+    CLOUDSQL_USER: [[REDACTED]]
+    CLOUDSQL_PASS: [[REDACTED]]
+    CLOUDSQL_SOCKET_DIR: /tmp
+    CLOUDSQL_INSTANCE: [[REDACTED]]
+    CLOUDSQL_PROJECT: [[REDACTED]]
+  sidecars:
+    - name: cloud_sql_proxy
+      process_types:
+      - web
+      command: './cloud_sql_proxy -dir $CLOUDSQL_SOCKET_DIR -credential_file key.json -projects $CLOUDSQL_PROJECT -instances $CLOUDSQL_INSTANCE'

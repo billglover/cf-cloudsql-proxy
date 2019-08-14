@@ -1,0 +1,10 @@
+---
+applications:
+- name: cloudsql-demo-app
+  memory: 24M
+  instances: 1
+  buildpacks:
+  - binary_buildpack
+  command: ./cloud_sql_demo
+  services:
+  - cloudsql-proxy

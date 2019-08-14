@@ -1,0 +1,12 @@
+---
+applications:
+- name: cloudsql-proxy
+  health-check-type: process
+  instances: 1
+  buildpacks:
+  - binary_buildpack
+  env:
+    CLOUDSQL_INSTANCE: pa-bglover:us-central1:io-pivotal-jlr-demo-2
+  command: './cloud_sql_proxy -credential_file key.json -instances=$CLOUDSQL_INSTANCE=tcp4:$CF_INSTANCE_INTERNAL_IP:8080'
+  routes:
+      - route: tcp.apps.pcfone.io:10005

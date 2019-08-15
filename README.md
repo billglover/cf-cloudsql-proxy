@@ -26,7 +26,7 @@ Download the Linux version of the Cloud SQL Proxy. You need the Linux binary bec
 ```plain
 wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
 ```
-
+ 
 Mark the binary as executable.
 
 ```plain

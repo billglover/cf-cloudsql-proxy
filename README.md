@@ -117,6 +117,8 @@ sys
 
 ### Option 2: User Provided Service
 
+![UPS](https://www.lucidchart.com/publicSegments/view/c08ebd66-aa53-4846-b720-db54bfec3624/image.jpeg)
+
 Switch to the `service/proxy` folder.
 
 ```plain

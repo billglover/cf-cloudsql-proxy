@@ -11,6 +11,7 @@ The application we are going to use to demonstrate the deployment of the Cloud S
 ## Deployment
 
 ### Option 1: Sidecar Process
+![Diagram](https://www.lucidchart.com/publicSegments/view/275431de-f3fb-445a-bacb-07d7a6e7bcd9/image.jpeg)
 
 **Note:** Sidecar processes are available in Beta from PAS v2.6. Deployment of a sidecar process requires the use of the `cf v3-*` commands. These are subject to change and the documentation below may not represent the latest version of the commands.
 

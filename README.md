@@ -80,7 +80,7 @@ Modify the `manifest.yml` based on your Cloud SQL instance properties. Pay atten
 - `CLOUDSQL_USER` - the MySQL database username
 - `CLOUDSQL_PASS` - the MySQL database password
 - `CLOUDSQL_SOCKET_DIR` - the directory in which to create unix sockets
-- `CLOUDSQL_INSTANCE` - the full Cloud SQL instance name as shown in the consol
+- `CLOUDSQL_INSTANCE` - the full Cloud SQL instance name as shown in the console
 - `CLOUDSQL_PROJECT` the GCP project containing the Cloud SQL instance
 
 Apply the application manifest.
@@ -174,7 +174,7 @@ Deploy the Cloud SQL Proxy.
 cf push -f manifest.yml --random-port
 ```
 
-Note the port that gets allocated to the
+Note the port that gets allocated to the application.
 
 You now need to create a User Provided Service. Applications bound to this service will have access to the Cloud SQL Proxy along with database credentials (if included). You should probably opt to present the database credential to the application using a secrets vault or credential store.
 
